@@ -34,7 +34,7 @@ resource "google_compute_instance" "vm" {
     sudo bash /tmp/SEIR-1/weekly_lessons/weeka/userscripts/supera.sh
   EOT
 
-  tags = ["ssh", "http"]
+  tags = ["ssh", "http", "http-server"]
 
   depends_on = [
     google_compute_subnetwork.private,
