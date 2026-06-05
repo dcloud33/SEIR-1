@@ -189,6 +189,98 @@ GCP Engineer Creates:
 
 Then shares:---> tunnel public IPs
 
+PHASE 3 — Peer Engineer Builds
+
+Using:
+
+        GCP public IPs
+        agreed PSK
+        agreed BGP values
+
+Creates:
+        
+        IPSec tunnels
+        BGP neighbors
+
+
+
+PHASE 4 — GCP Engineer Finishes Peer Config
+
+Now GCP side enters:
+
+        peer public IPs
+        peer BGP IPs
+
+PHASE 5 — Bring Up Tunnel
+
+Expected sequence:
+
+| Layer       | Status      |
+| ----------- | ----------- |
+| IKE Phase 1 | UP          |
+| Phase 2     | UP          |
+| BGP         | Established |
+| Routes      | Learned     |
+| Traffic     | Flowing     |
+
+
+The Most Important Student Lesson
+Tunnel UP ≠ Network Working
+
+Students see: Tunnel Status: Established
+
+and think: “Done.”
+
+Nope 😄 BET!
+
+Now comes:
+
+        routing
+        firewall rules
+        MTU
+        advertisements
+        asymmetric routing
+        ICMP policies
+
+The Great Diagram
+
+        STEP 1:
+        Agree on PSK
+        Agree on ASN
+        Agree on 169.254.x.x
+        
+        STEP 2:
+        Engineer A creates VPN gateway
+        Gets public IPs
+        
+        STEP 3:
+        Engineer A sends public IPs to Engineer B
+        
+        STEP 4:
+        Engineer B builds peer tunnel
+        
+        STEP 5:
+        Both configure BGP peers
+        
+        STEP 6:
+        Pray to the routing gods
+
+Excellent Real-World Insight
+
+This is why network engineering still matters.
+
+You should discover:
+
+        distributed systems require coordination
+        automation has dependency limits
+        sequencing matters
+        communication matters
+
+REmember: “The hardest part of networking is often humans.” 😄
+
+
+
+
 
 
 
